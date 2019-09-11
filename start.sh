@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ ! -d /etc/letsencrypt/live/g.yifei.me/ ]; then
+if [ ! -d /etc/letsencrypt/live/g.guolipeng.com/ ]; then
     /opt/nginx/sbin/nginx -c /opt/nginx/conf/nginx_http_only.conf
     mkdir -p /opt/nginx/html/.well-known/acme-challenge
-    certbot certonly --webroot --agree-tos --no-eff-email --email kongyifei@gmail.com \
-    -w /opt/nginx/html -d gg.yifei.me
+    certbot certonly --webroot --agree-tos --no-eff-email --email guolipeng@gmail.com \
+    -w /opt/nginx/html -d g.guolipeng.com
     /opt/nginx/sbin/nginx -s quit
 fi
 
